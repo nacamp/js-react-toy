@@ -1,0 +1,20 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true
+  },
+  "extends": ["react-app", "airbnb", "airbnb/hooks"],
+  "rules": {
+    "max-len": "off",
+    "react/prop-types": ["off"],
+    "react/jsx-filename-extension": [1, { "extensions": ["js", "jsx"] }],
+    "no-underscore-dangle": 0
+  },
+  "globals": {
+    "describe": true,
+    "before": true,
+    "after": true,
+    "afterEach": true,
+    "it": true
+  }
+}
