@@ -3,7 +3,11 @@ import { useDropzone } from 'react-dropzone';
 
 function AcceptFile() {
   const onDropRejected = useCallback(() => {
-    console.log('rejected');
+    console.log('onDropRejected called');
+  }, []);
+
+  const onDropAccepted = useCallback(() => {
+    console.log('onDropAccepted called');
   }, []);
 
   const onDrop = useCallback(async (acceptedFiles) => {
@@ -20,6 +24,12 @@ function AcceptFile() {
       for (const pair of data.entries()) {
         console.log(`${pair[0]}, ${pair[1]}`);
       }
+      const reader = new FileReader();
+      reader.onload = function (event) {
+        console.log('file contents: ');
+        console.log(event.target.result);
+      };
+      reader.readAsText(file);
       // axios.post
     }
   }, []);
@@ -30,8 +40,9 @@ function AcceptFile() {
     getRootProps,
     getInputProps,
   } = useDropzone({
-    accept: 'text/plain, image/png',
+    accept: 'text/plain, text/html',
     multiple: true,
+    onDropAccepted,
     onDropRejected,
     onDrop,
   });
@@ -68,7 +79,7 @@ function AcceptFile() {
       <div {...getRootProps({ className: 'dropzone' })}>
         <input {...getInputProps()} />
         <p>Drag 'n' drop some files here, or click to select files</p>
-        <em>(Only *.txt and *.png images will be accepted)</em>
+        <em>(Only *.txt and *.html file will be accepted)</em>
       </div>
       <aside>
         <h4>Accepted files</h4>
