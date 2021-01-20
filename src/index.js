@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
+import {BrowserRouter} from 'react-router-dom';
+import {createStore} from 'redux';
+import {Provider} from 'react-redux';
+import {composeWithDevTools} from 'redux-devtools-extension';
+import {IntlProvider} from 'react-intl';
+// eslint-disable-next-line import/extensions
+import ko from './locale/ko.js';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import rootReducer from './modules';
@@ -11,11 +14,13 @@ import rootReducer from './modules';
 const store = createStore(rootReducer, composeWithDevTools());
 console.log('store:', store.getState());
 ReactDOM.render(
-  <Provider store={store}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </Provider>,
+    <Provider store={store}>
+      <IntlProvider locale="ko" messages={ko}>
+        <BrowserRouter>
+          <App/>
+        </BrowserRouter>
+      </IntlProvider>
+    </Provider>,
   document.getElementById('root'),
 );
 
