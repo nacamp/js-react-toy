@@ -1,8 +1,8 @@
 // https://react.vlpt.us/redux/
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Todos from './Todos';
-import {addTodo, toggleTodo} from '../modules/todos';
+import { addTodo, toggleTodo } from '../modules/todos';
 
 class TodosContainerClass extends Component {
   constructor(props) {
@@ -22,11 +22,11 @@ class TodosContainerClass extends Component {
 
   render() {
     return (
-        <Todos
-            todos={this.props.todos}
-            onCreate={this.onCreate}
-            onToggle={this.onToggle}
-        />
+      <Todos
+        todos={this.props.todos}
+        onCreate={this.onCreate}
+        onToggle={this.onToggle}
+      />
     );
   }
 }
@@ -43,9 +43,9 @@ class TodosContainerClass extends Component {
 // )(TodosContainerClass);
 
 export default connect(
-    (state) => ({todos: state.todos}),
-    {
-      addTodo,
-      toggleTodo,
-    },
+  (state) => ({ todos: state.todos }),
+  {
+    addTodo,
+    toggleTodo,
+  },
 )(TodosContainerClass);
