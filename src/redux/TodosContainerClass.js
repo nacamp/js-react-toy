@@ -22,8 +22,11 @@ class TodosContainerClass extends Component {
 
   render() {
     return (
-        <Todos todos={this.props.todos} onCreate={this.onCreate}
-               onToggle={this.onToggle}/>
+        <Todos
+            todos={this.props.todos}
+            onCreate={this.onCreate}
+            onToggle={this.onToggle}
+        />
     );
   }
 }

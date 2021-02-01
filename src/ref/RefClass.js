@@ -17,7 +17,7 @@ class FancyInput extends React.Component {
 
   render() {
     return (
-        <input ref={this.inputRef}/>
+      <input ref={this.inputRef}/>
     );
   }
 }
