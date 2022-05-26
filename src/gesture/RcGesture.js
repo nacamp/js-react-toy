@@ -47,7 +47,7 @@ export default function RcGesture({ match }) {
       console.log('컴포넌트가 화면에서 사라짐');
     };
   }, []);
-  if (id === 1) {
+  if (id === undefined || id === 1) {
     return (
       <div ref={canvasBox} id="canvasBox" style={{ margin: 0 }}>
         <div style={{ height: '100px' }}> </div>

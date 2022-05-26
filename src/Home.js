@@ -1,23 +1,23 @@
 import React from 'react';
-import {FormattedMessage} from 'react-intl';
-import {Link} from 'react-router-dom';
+import { FormattedMessage } from 'react-intl';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
   return (
+    <div>
       <div>
-        <div>
-          React Intl : <FormattedMessage id="Where.Hello"/>
-        </div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/dnd-file">drag and drop file</Link>
-          </li>
-          <li>
-            <Link to="/dnd">drag and drop</Link>
-          </li>
+        React Intl : <FormattedMessage id="Where.Hello" />
+      </div>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/dnd-file">drag and drop file</Link>
+        </li>
+        <li>
+          <Link to="/dnd">drag and drop</Link>
+        </li>
         <li>
           <Link to="/ref">ref</Link>
         </li>
@@ -41,6 +41,12 @@ export default function Home() {
         </li>
         <li>
           <Link to="/gesture/2">gesture swipe</Link>
+        </li>
+        <li>
+          <Link to="/redux">redux</Link>
+        </li>
+        <li>
+          <Link to="/redux-class">redux(class)</Link>
         </li>
       </ul>
     </div>

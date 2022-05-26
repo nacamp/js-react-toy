@@ -22,6 +22,26 @@ react train
 ## xlsx (excel)
 * https://www.npmjs.com/package/xlsx
 
+## gesture
+* css https://developer.mozilla.org/ko/docs/Web/CSS/transform
+* mobile minimum font size
+    * https://learnui.design/blog/mobile-desktop-website-font-size-guidelines.html
+* touchevent
+  * https://developer.mozilla.org/ko/docs/Web/API/Touch_events
+  * https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events/Pinch_zoom_gestures
+* rc-gesture
+    * https://react-component.github.io/gesture
+    * https://react-component.github.io/gesture/examples/simple.html
+* react-use-gesture
+    * https://github.com/pmndrs/react-use-gesture#adding-gestures-to-dom-nodes
+
+## react-intl
+* https://formatjs.io/docs/getting-started/installation/
+* https://code-masterjung.tistory.com/58
+* https://github.com/JungKyuHyun/react-intl-test
+* https://medium.com/javascript-in-plain-english/internationalization-in-react-apps-using-react-intl-1d72a6f14053
+
+
 ## run https//localhost in chrome
 ```
 input chrome:/net-internals/#hsts in chrome address window
